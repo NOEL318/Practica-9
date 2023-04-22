@@ -1,0 +1,130 @@
+body {
+    margin: 0;
+    background-color: #e1e1e1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+*{
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+.success{
+    background-color: #00D100;
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+}
+.output-table td{
+    padding: 8px;
+    border: solid 1px #000000;
+}
+.output-table{
+padding: 0;
+
+}
+.forms{
+    box-shadow: 10px 10px 63px -30px rgba(0,0,0,0.68);
+    -webkit-box-shadow: 10px 10px 63px -30px rgba(0,0,0,0.68);
+    -moz-box-shadow: 10px 10px 63px -30px rgba(0,0,0,0.68);
+    background-color: #ffffff;
+    border-radius: 11px;
+    padding: 40px;
+}
+h1{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 500;
+    color: #000000;
+}
+.buttons-group-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.buttons-group-menu button{
+    width: 100%;
+    border-radius: 8px;
+    padding: 18px 31px;
+    background-color: #0071e3;
+    color: #ffffff;
+    border: none;
+    margin: 10px;
+    font-size: 17px;
+}
+.submit-button{
+    border-radius: 8px;
+    padding: 18px 31px;
+    background-color: #0071e3;
+    color: #ffffff;
+    border: none;
+margin-top: 20px;
+    width: 100%;
+    font-size: 17px;
+}
+.submit-button a{
+    text-decoration: none;
+    color: #ffffff;
+
+}
+.submit-button.response{
+    width: 250px !important;
+}
+.form{
+    width: 350px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.form input{
+    width: 350px;
+    color: #1d1d1f;
+    border-color: #86868b;
+    margin-bottom: 0.8rem;
+    font-size: 17px;
+    height: 3.2rem;
+    border-radius: 12px;
+    box-sizing: border-box;
+    padding: 1rem 0.9rem 0;
+    border: 1px solid;
+position: relative;
+z-index: 1;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form .input label{
+    font-family: 'Montserrat Alternates', sans-serif;
+font-weight: 300;
+color: #6e6e73;
+    position: relative;
+    font-size: 12px;
+    top: 20px;
+    z-index: 2;
+    left: 1rem;
+}
+.form .input{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.formulario{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#formulario-productos, #formulario-proveedores, #formulario-compra{
+    display: none;
+width: 100%;
+  align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
