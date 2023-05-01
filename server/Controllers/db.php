@@ -1,10 +1,11 @@
 <?php
-function connection(){
+function connection()
+{
     $hostname = "localhost";
     $usuariodb = "root";
     $passworddb = "";
     $dbname = "practica9";
-    $conectar= mysqli_connect($hostname,$usuariodb,$passworddb,$dbname);
+    $conectar = mysqli_connect($hostname, $usuariodb, $passworddb, $dbname);
     return $conectar;
 }
 ?>

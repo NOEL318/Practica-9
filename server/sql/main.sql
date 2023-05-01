@@ -27,12 +27,3 @@ constraint id_proveedor foreign key (id_proveedor) references Proveedor
 constraint id_producto foreign key (id_producto) references Producto
 (id_producto) on update cascade on delete cascade
 );
-
-use practica9;
-SELECT * FROM producto;
-
-use practica9;
-SELECT * FROM proveedor;
-
-use practica9;
-INSERT INTO proveedor VALUES ('5', 'GRUPO-FEMSA', '5512348710', 'FEMSA', 'FEMSA@GMAIL.COM');

@@ -7,6 +7,17 @@ body {
     height: 100%;
     min-height: 100vh;
     flex-direction: column;
+    transition: all 0.3s;
+}
+.main{
+        margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 110%;
+    min-height: 100vh;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 *{
@@ -14,6 +25,12 @@ body {
 }
 .success{
     background-color: #00D100;
+    padding: 20px;
+    border-radius: 8px;
+    color: #ffffff;
+}
+.no-success{
+    background-color: #d20000;
     padding: 20px;
     border-radius: 8px;
     color: #ffffff;
@@ -33,6 +50,7 @@ padding: 0;
     background-color: #ffffff;
     border-radius: 11px;
     padding: 40px;
+    margin: 30px;
 }
 h1{
     font-family: 'Montserrat Alternates', sans-serif;
@@ -121,10 +139,16 @@ color: #6e6e73;
     justify-content: center;
     flex-direction: column;
 }
-#formulario-productos, #formulario-proveedores, #formulario-compra{
+#add-formulario-productos, #add-formulario-proveedores, #add-formulario-compra,
+#delete-formulario-productos, #delete-formulario-proveedores, #delete-formulario-compra,
+#update-formulario-productos, #update-formulario-proveedores, #update-formulario-compra,
+#search-formulario-productos, #search-formulario-proveedores, #search-formulario-compra{
     display: none;
 width: 100%;
   align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+.hr{
+    width: 100%;
 }

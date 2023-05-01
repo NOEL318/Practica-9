@@ -14,84 +14,285 @@
 </head>
 
 <body>
-  <div class="forms">
-    <div class="buttons-group-menu">
-      <button class="menu-button" id="productos">Productos</button>
-      <button class="menu-button" id="proveedores">Proveedores</button>
-      <button class="menu-button" id="compra">Compra</button>
-    </div>
+  <div class="main">
 
-    <div id="formulario-productos">
-      <h1>Registro de Productos</h1>
-      <form class="form" method="post" action="../server/Controllers/Productos/Add.php">
-        <div class="input">
 
-          <label for="nombre">Nombre de Producto</label>
-          <input type="text" id="nombre" name="nombre_producto" />
-        </div>
-        <div class="input">
+    <div class="forms">
+      <h2>Agregar Registros</h2>
+      <div class="buttons-group-menu">
+        <button class="menu-button" id="add-productos">Productos</button>
+        <button class="menu-button" id="add-proveedores">Proveedores</button>
+        <button class="menu-button" id="add-compra">Compra</button>
+        <button class="menu-button" id="close-add">X</button>
 
-          <label for="cantidad">Cantidad</label>
-          <input type="number" name="cantidad_producto" />
-        </div>
-        <div class="input">
+      </div>
 
-          <label for="precio_compra">Precio de Compra</label>
-          <input type="number" name="precio_compra_producto" />
-        </div>
-        <div class="input">
-
-          <label for="precio_venta">Precio de Venta</label>
-          <input type="number" name="precio_venta_producto" />
-        </div>
-
-        <button class="submit-button" type="submit">Agregar Producto</button>
-      </form>
-    </div>
-
-    <div id="formulario-proveedores">
-      <h1>Registro de Proveedores</h1>
-      <form class="form" method="post" action="../server/Controllers/Proveedores/Add.php">
-        <div class="input">
-          <label for="nombre">Nombre de Proveedor</label>
-          <input type="text" id="nombre_proveedor" name="nombre_proveedor" />
-        </div>
-        <div class="input">
-          <label for="telefono_proveedor">Teléfono de Proveedor</label>
-          <input type="text" id="telefono_proveedor" name="telefono_proveedor" />
-        </div>
-        <div class="input">
-          <label for="empresa_proveedor">Empresa</label>
-          <input type="text" id="empresa_proveedor" name="empresa_proveedor" />
-        </div>
-        <div class="input">
-          <label for="email_proveedor">Email de Proveedor</label>
-          <input type="email" id="email_proveedor" name="email_proveedor" />
-        </div>
-        <button class="submit-button" type="submit">Agregar Proveedor</button>
-      </form>
-    </div>
-
-    <div id="formulario-compra">
-      <h1>Registro de Compra</h1>
-      <form class="form" method="post" action="../server/Controllers/Compra/Add.php">
-        <div class="input">
-          <label for="id_producto">ID de Proveedor</label>
-          <input type="text" id="id_producto" name="id_producto" />
+      <div id="add-formulario-productos">
+        <h1>Productos</h1>
+        <form class="form" method="post" action="../server/Controllers/Productos/Add.php">
           <div class="input">
+            <label for="nombre">Nombre de Producto</label>
+            <input type="text" id="nombre" name="nombre_producto" />
+          </div>
+          <div class="input">
+            <label for="cantidad">Cantidad</label>
+            <input type="number" name="cantidad_producto" />
+          </div>
+          <div class="input">
+            <label for="precio_compra">Precio de Compra</label>
+            <input type="number" name="precio_compra_producto" />
+          </div>
+          <div class="input">
+            <label for="precio_venta">Precio de Venta</label>
+            <input type="number" name="precio_venta_producto" />
           </div>
 
-          <label for="id_proveedor">ID de Producto</label>
-          <input type="text" id="id_proveedor" name="id_proveedor" />
+          <button class="submit-button" type="submit">Agregar Producto</button>
+        </form>
+      </div>
+
+      <div id="add-formulario-proveedores">
+        <h1>Proveedores</h1>
+        <form class="form" method="post" action="../server/Controllers/Proveedores/Add.php">
           <div class="input">
+            <label for="nombre">Nombre de Proveedor</label>
+            <input type="text" id="nombre_proveedor" name="nombre_proveedor" />
+          </div>
+          <div class="input">
+            <label for="telefono_proveedor">Teléfono de Proveedor</label>
+            <input type="text" id="telefono_proveedor" name="telefono_proveedor" />
+          </div>
+          <div class="input">
+            <label for="empresa_proveedor">Empresa</label>
+            <input type="text" id="empresa_proveedor" name="empresa_proveedor" />
+          </div>
+          <div class="input">
+            <label for="email_proveedor">Email de Proveedor</label>
+            <input type="email" id="email_proveedor" name="email_proveedor" />
+          </div>
+          <button class="submit-button" type="submit">Agregar Proveedor</button>
+        </form>
+      </div>
+
+      <div id="add-formulario-compra">
+        <h1>Compra</h1>
+        <form class="form" method="post" action="../server/Controllers/Compra/Add.php">
+          <div class="input">
+            <label for="id_producto">ID de Producto</label>
+            <input type="text" id="id_producto" name="id_producto" />
+            <div class="input">
+            </div>
+
+            <label for="id_proveedor">ID de Proveedor</label>
+            <input type="text" id="id_proveedor" name="id_proveedor" />
+            <div class="input">
+            </div>
+
+          </div>
+          <button class="submit-button" type="submit">Agregar Registro de Compra</button>
+        </form>
+      </div>
+    </div>
+
+
+    <div class="forms">
+      <h2>Eliminar Registros</h2>
+      <div class="buttons-group-menu">
+        <button class="menu-button" id="delete-productos">Productos</button>
+        <button class="menu-button" id="delete-proveedores">Proveedores</button>
+        <button class="menu-button" id="delete-compra">Compra</button>
+        <button class="menu-button" id="close-delete">X</button>
+
+      </div>
+
+      <div id="delete-formulario-productos">
+        <h1>Productos</h1>
+        <form class="form" method="post" action="../server/Controllers/Productos/Delete.php">
+          <div class="input">
+            <label for="id_producto">ID de Producto</label>
+            <input type="text" id="id_producto" name="id_producto" />
+          </div>
+          <button class="submit-button" type="submit">Eliminar Producto</button>
+        </form>
+      </div>
+
+      <div id="delete-formulario-proveedores">
+        <h1>Proveedores</h1>
+        <form class="form" method="post" action="../server/Controllers/Proveedores/Delete.php">
+          <div class="input">
+            <label for="id_proveedor">ID de Proveedor</label>
+            <input type="text" id="id_proveedor" name="id_proveedor" />
+          </div>
+          <button class="submit-button" type="submit">Eliminar Proveedor</button>
+        </form>
+      </div>
+
+      <div id="delete-formulario-compra">
+        <h1>Compra</h1>
+        <form class="form" method="post" action="../server/Controllers/Compra/Delete.php">
+          <div class="input">
+            <label for="id_compra">ID de Compra</label>
+            <input type="text" id="id_compra" name="id_compra" />
+            <div class="input">
+            </div>
+
+          </div>
+          <button class="submit-button" type="submit">Eliminar Registro de Compra</button>
+        </form>
+      </div>
+
+    </div>
+
+
+
+    <div class="forms">
+      <h2>Actualizar Registros</h2>
+      <div class="buttons-group-menu">
+        <button class="menu-button" id="update-productos">Productos</button>
+        <button class="menu-button" id="update-proveedores">Proveedores</button>
+        <button class="menu-button" id="update-compra">Compra</button>
+        <button class="menu-button" id="close-update">X</button>
+
+      </div>
+
+      <div id="update-formulario-productos">
+        <h1>Productos</h1>
+        <form class="form" method="post" action="../server/Controllers/Productos/Update.php">
+          <div class="input">
+            <label for="id_producto">ID de Producto</label>
+            <input type="text" id="id_producto" name="id_producto" />
+          </div>
+          <hr class="hr">
+          Nuevos Valores:
+          <div class="input">
+            <label for="nombre">Nombre de Producto</label>
+            <input type="text" id="nombre" name="nombre_producto" />
+          </div>
+          <div class="input">
+            <label for="cantidad">Cantidad</label>
+            <input type="number" name="cantidad_producto" />
+          </div>
+          <div class="input">
+
+            <label for="precio_compra">Precio de Compra</label>
+            <input type="number" name="precio_compra_producto" />
+          </div>
+          <div class="input">
+
+            <label for="precio_venta">Precio de Venta</label>
+            <input type="number" name="precio_venta_producto" />
           </div>
 
-        </div>
-        <button class="submit-button" type="submit">Agregar Registro de Compra</button>
-      </form>
+
+          <button class="submit-button" type="submit">Actualizar Producto</button>
+        </form>
+      </div>
+
+      <div id="update-formulario-proveedores">
+        <h1>Proveedores</h1>
+        <form class="form" method="post" action="../server/Controllers/Proveedores/Update.php">
+          <div class="input">
+            <label for="id_proveedor">ID de Proveedor</label>
+            <input type="text" id="id_proveedor" name="id_proveedor" />
+          </div>
+          <hr class="hr">
+          Nuevos Valores:
+          <div class="input">
+            <label for="nombre">Nombre de Proveedor</label>
+            <input type="text" id="nombre_proveedor" name="nombre_proveedor" />
+          </div>
+          <div class="input">
+            <label for="telefono_proveedor">Teléfono de Proveedor</label>
+            <input type="text" id="telefono_proveedor" name="telefono_proveedor" />
+          </div>
+          <div class="input">
+            <label for="empresa_proveedor">Empresa</label>
+            <input type="text" id="empresa_proveedor" name="empresa_proveedor" />
+          </div>
+          <div class="input">
+            <label for="email_proveedor">Email de Proveedor</label>
+            <input type="email" id="email_proveedor" name="email_proveedor" />
+          </div>
+
+          <button class="submit-button" type="submit">Actualizar Proveedor</button>
+        </form>
+      </div>
+
+      <div id="update-formulario-compra">
+        <h1>Compra</h1>
+        <form class="form" method="post" action="../server/Controllers/Compra/Update.php">
+          <div class="input">
+            <label for="id_compra">ID de Compra</label>
+            <input type="text" id="id_compra" name="id_compra" />
+          </div>
+          <hr class="hr">
+          <div class="input">
+            <label for="id_producto">ID de Producto</label>
+            <input type="text" id="id_producto" name="id_producto" />
+
+          </div>
+          <div class="input">
+
+            <label for="id_proveedor">ID de Proveedor</label>
+            <input type="text" id="id_proveedor" name="id_proveedor" />
+
+          </div>
+          <button class="submit-button" type="submit">Actualizar Registro de Compra</button>
+        </form>
+      </div>
+    </div>
+
+
+
+    <div class="forms">
+      <h2>Buscar Registros</h2>
+      <div class="buttons-group-menu">
+        <button class="menu-button" id="search-productos">Productos</button>
+        <button class="menu-button" id="search-proveedores">Proveedores</button>
+        <button class="menu-button" id="search-compra">Compra</button>
+        <button class="menu-button" id="close-search">X</button>
+
+      </div>
+
+      <div id="search-formulario-productos">
+        <h1>Productos</h1>
+        <form class="form" method="post" action="../server/Controllers/Productos/Search.php">
+          <div class="input">
+            <label for="id_producto">ID de Producto</label>
+            <input type="text" id="id_producto" name="id_producto" />
+          </div>
+          <button class="submit-button" type="submit">Buscar Producto</button>
+        </form>
+      </div>
+
+      <div id="search-formulario-proveedores">
+        <h1>Proveedores</h1>
+        <form class="form" method="post" action="../server/Controllers/Proveedores/Search.php">
+          <div class="input">
+            <label for="id_proveedor">ID de Proveedor</label>
+            <input type="text" id="id_proveedor" name="id_proveedor" />
+          </div>
+          <button class="submit-button" type="submit">Buscar Proveedor</button>
+        </form>
+      </div>
+
+      <div id="search-formulario-compra">
+        <h1>Compra</h1>
+        <form class="form" method="post" action="../server/Controllers/Compra/Search.php">
+          <div class="input">
+            <label for="id_compra">ID de Compra</label>
+            <input type="text" id="id_compra" name="id_compra" />
+            <div class="input">
+            </div>
+
+          </div>
+          <button class="submit-button" type="submit">Buscar Registro de Compra</button>
+        </form>
+      </div>
     </div>
 
   </div>
+
   <script type="text/javascript" src="./index.js"></script>
 </body>
 
